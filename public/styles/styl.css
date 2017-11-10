@@ -1,0 +1,772 @@
+body {
+  margin-top: 15px;
+  font: 12px Verdana, Arial, Geneva, sans-serif;
+  color: #000;
+/*background-color: Silver;*/
+/*
+  background: #c9c7bb url("images/background.gif") repeat-x scroll top
+  */
+  background: #c9c7bb url("images/background.gif") repeat-x scroll top;
+}
+
+.m-bg-1 {
+  position: relative;
+  z-index: 2;
+  min-height: 600px;
+  _height: 600px;
+  margin: 0 auto -10px;
+  padding: 10px 0 0;
+  background: url('images/content_back_top.gif') no-repeat 50% 0;
+  _background-image: url('images/content_back_top.gif');
+}
+
+.m-bg-2 {
+  padding: 0 0 10px;
+  background: url('images/content_back_bottom.gif') no-repeat 50% 100%;
+  _background-image: url('/u/n3/shadeBottom6-b.gif');
+}
+
+.m-bg-3 {
+  background: url('images/content_back_middle.gif') repeat-y 50% 0;
+ /* _background-image: url('/u/n3/shadeMid6-b.gif');
+  _zoom: 1;*/
+}
+
+.m-bg-4 {
+  width: 1000px;
+/*  min-height: 600px;*/
+  /*height: 600px;*/
+  height: 0px;
+  margin: 0 auto;
+  padding: 0 0 0px;
+  background: #FFF;
+  text-align: left;
+}
+
+h1{
+  font-size: 26px;
+  padding: 20px;
+  font: Verdana, Arial, Geneva, sans-serif;
+  color: #529520;
+}
+
+h2{
+  font-size: 24px;
+  padding: 20px;
+  font: Verdana, Arial, Geneva, sans-serif;
+  color: #529520;
+}
+
+h3{
+  font-size: 16px;
+  padding: 20px;
+  font: Verdana, Arial, Geneva, sans-serif;
+  color: #529520;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img{
+  border: 0;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+.DivCenter{
+  text-align: center;
+}
+
+.DivCenter{
+/*  opraven bug pro FF spatn� centrov�n� pres styl */
+  text-align: -moz-center;
+}
+
+.textVpravo{
+  text-align: right;
+}
+
+.textVlevo{
+  text-align: left;
+}
+
+.textCenter{
+  text-align: center;
+}
+
+.noBorder{
+  border: 0px solid white;
+}
+
+.floatLeft{
+  float: left;
+}
+
+.notices {
+  margin: 0;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  background-color: #fdf2f1;
+  color: #fe3b29;
+  border: 1px dotted #F9E7E7;
+  margin-top: 10px;
+}
+
+.odsazeni50pxVpravo{
+  margin-right: 50px;
+}
+
+.odsazeni20pxVpravo{
+  margin-right: 20px;
+}
+
+.menuBack {
+  background: transparent url("images/menu_background_2.gif") no-repeat scroll top;
+  margin-bottom: 10px;
+  line-height: 56px;
+  width: 1000px;
+}
+
+#barvy {
+  margin: 10px auto 0 auto;
+  padding: 0;
+  border: 0;
+  width: auto;
+  height: auto;
+}
+
+#barvy img {
+  margin: 4px;
+  padding: 0;
+  border: 1px solid #529520;
+}
+/*........... Zakladni layout .................*/
+/* heading */
+
+#heading {
+  height: 24px;
+  background: url("images/menu_pozadi.gif") repeat-x scroll left top;
+/*width: 722px;*/
+/*background-color: #278322;*/
+/*  background-image: url(images/menu_pozadi.gif);*/
+/*  text-align: left;*/
+}
+
+#heading ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 25px;
+  height: 25px;
+  border: 1px #b3bbd1 solid;
+/*	background: #215c99 url("images/menu_horni_bg.gif") repeat-x scroll left top;*/
+}
+
+#heading li{
+  float: left;
+  padding: 0;
+}
+
+#heading li a {
+  font: 11px Tahoma, sans-serif;
+  height: 25px;
+  line-height: 25px;
+  float: left;
+  display: block;
+  color: #fff;
+  background-color: #278322;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  width: 120px;
+}
+
+#heading li a:hover {
+  color: #ccc;
+}
+
+#heading li .active a:hover {
+  color: #000 !important;
+}
+
+#heading li .active {
+  font-weight: bold;
+}
+/* Hide from IE5-Mac \*/
+
+#heading li a {
+  float: none;
+}
+/* End hide */
+/* heading END*/
+
+div#container{
+  width: 950px;
+  margin: 0 auto;
+}
+
+#paska_pod_menu{
+  clear: both;
+  background-color: #1F581F;
+  height: 5px;
+}
+
+#ramecek_obrazek{
+  height: 167px;
+  width: 181px;
+  background-color: #00A401;
+  float: left;
+}
+
+#menu_logo{
+  padding-left: 25px;
+  padding-top: 15px;
+  float: left;
+/*	height: 115px;*/
+}
+/**** MENU  ****/
+
+div#navigation{
+  float: left;
+  width: 180px;
+/*	height: 500px;*/
+  border: 1px solid #c3cddd;
+/*	background-color: white;*/
+  background-color: #529520;
+  margin-bottom: 10px;
+}
+
+.menu {
+  float: left;
+  width: 140px;
+  height: 250px;
+  overflow: hidden;
+  font: bold 12px/23px Arial;
+}
+/*** END MENU ****/
+
+div#content{
+  float: right;
+  text-align: left;
+  width: 760px;
+  color: Black;
+
+  background-color: White;
+  padding-left: 0px;
+  padding-bottom: 10px;
+  padding-top: 0px;
+}
+
+.clearBoth{
+  clear: both;
+}
+
+.clearLeft{
+  clear: left;
+}
+
+.clearRight{
+  clear: right;
+}
+
+div#content a{
+  text-decoration: underline;
+}
+
+.contentSelectHead{
+  background-color: #9f1b47;
+  color: White;
+  height: 21px;
+  line-height: 21px;
+  padding-left: 20px;
+  border-top: 1px solid #4c6b98;
+}
+
+.contentBody{
+  padding-left: 15px;
+  height: 700px;
+}
+
+div#footer{
+  width: 950px;
+/*	background: #529520;*/
+  background: url("images/menu_pozadi.gif") repeat-x scroll left top;
+  font: 12px Verdana, Arial, Geneva, sans-serif;
+  font-weight: bold;
+  color: #FFF;
+}
+
+div#footer p{
+  padding: 5px 10px;
+}
+/********* END GENERAL ***********/
+/******** INDEX *****************/
+
+.vlozene_menu_obal {
+  color: White;
+  width: 177px;
+  height: 18px;
+  background-image: url(images/index/menu_prihlaseni.gif);
+  background-repeat: repeat-x;
+  text-align: center;
+  font: normal bold 14px Arial, Helvetica, sans-serif;
+  padding-top: 3px;
+  font-weight: bold;
+}
+
+.vlozene_menu_obsah {
+  width: 177px;
+  background-color: #eeeeee;
+}
+
+.vlozene_menu_obsah a {
+  color: Black;
+}
+/*********** MENU Prihlaseny ***********/
+
+dl, dt, dd, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+dt{
+  color: #FFA500;
+  font-weight: bold;
+  font-size: larger;
+}
+
+#menu {}
+
+#menu {
+  width: 180px;
+}
+
+#menu dt {
+  cursor: pointer;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+/*	font-weight: bold;*/
+/*	border: 1px solid gray;*/
+/*	background-image: url(images/index/menu_prihlaseni.gif);
+	background-repeat: repeat-x;
+	color: White;
+	*/
+}
+
+#menu dd {
+/*border: 1px solid gray;*/}
+
+#menu li {
+  text-align: center;
+  background: #529520;
+  color: White;
+/*line-height: 30px;*/
+/*font-weight: bold;*/
+  font-size: 16px;
+}
+
+#menu li a, #menu dt a {
+  color: #e4f52b;
+  text-decoration: none;
+  display: block;
+  border: 0 none;
+  height: 100%;
+}
+
+#menu li a:hover, #menu dt a:hover {
+  background: #529520;
+}
+/************* END MENU *************/
+/********** formulare ***********/
+
+.form_content{
+  width: 300px;
+  border: 1px solid #81a0c5;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.form_label{
+  padding-right: 8px;
+  white-space: nowrap;
+  text-align: left;
+  font-weight: bold;
+}
+
+.form_input{
+  margin-right: 5px;
+  padding: 1px;
+  padding-left: 8px;
+  border: 1px solid #1a4c7d;
+  margin-top: 3px;
+  height: 20px;
+}
+
+.form_submit{
+  border-bottom: 1px solid #81a0c5;
+  border-top: 1px solid #70a5de;
+  border-left: 1px solid #70a5de;
+  border-right: 1px solid #70a5de;
+  text-align: center;
+}
+
+.selectInput{
+}
+/********** END formulare ***********/
+/**********  Galerie **************/
+
+.galeriePrehledtabulka{
+  display: inline;
+/*margin-right: 30px;*/
+  width: 350px;
+}
+
+.galeriePrehledFotka{
+  width: 151px;
+  padding-left: 1px;
+  padding-top: 2px;
+  border-left: 2px solid #529520;
+  border-right: 1px solid #529520;
+  border-top: 2px solid #529520;
+  border-bottom: 2px solid #529520;
+}
+
+.galeriePrehledTextTd{
+  width: 170px;
+  border-right: 2px solid #529520;
+  border-top: 2px solid #529520;
+  border-bottom: 2px solid #529520;
+}
+
+.galeriePrehledText{
+  height: 173px;
+  padding-left: 10px;
+  line-height: 19px;
+  font-size: 12px;
+/*	font-weight: bold;*/
+}
+
+.galeriePrehledText A{
+  padding-left: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #529520;
+}
+
+.galerieZobrazitBtn{
+  padding-left: 3px;
+  height: 27px;
+}
+/********** END galerie ************/
+/* --------------------------------------------- */
+/* VYHLEDAVANI Z UVODNI STRANKY */
+
+.searchform {
+  float: right;
+  padding: 2px 5px 0 0;
+}
+
+form.search {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+form.search input.text {
+  margin: 0;
+  margin-top: 8px;
+
+
+  width: 100px;
+  border: 1px solid #ccc;
+  background: #FFF;
+  color: #000;
+}
+
+form.search input.text:hover {
+  border: 1px solid #808080;
+}
+
+form.search input.searchbutton {
+  margin: 0;
+  font-size: 100%;
+  font-family: Arial, Sans-serif;
+  border: none;
+  background: #FFFFFF;
+  color: #808080;
+  padding: 1px;
+  font-weight: bold;
+  margin-left: 25px;
+  margin-top: 5px;
+}
+/******** END vyhledavani ******/
+
+.galerieNavigace {
+  margin-top: 8px;
+}
+
+#navDiv{
+  clear: both;
+  padding-bottom: 5px;
+}
+
+#navDivBott{
+  clear: both;
+  padding-bottom: 5px;
+}
+
+.displayInline{
+  display: inline;
+}
+
+.odsaz {
+  display: block;
+  float: left;
+  font-weight: bold;
+  width: 75px;
+}
+
+.right_15px{
+  margin-top: 10px;
+  margin-right: 15px;
+  border: 2px solid #1a4c7d;
+}
+
+.odkaz{
+  color: black;
+}
+
+.tabulka{
+/*	width: 100%;*/
+  border-collapse: collapse;
+}
+
+.tabulka th{
+  background-color: Green;
+  color: White;
+  height: 20px;
+	
+}
+
+.tabulka td{
+  line-height: 25px;
+	text-align: left;
+}
+
+.sirka50px{
+  width: 50px;
+}
+
+.sirka80px{
+  width: 80px;
+}
+
+.sirka100px{
+  width: 100px;
+}
+
+.sirka150px{
+  width: 150px;
+}
+
+.sirka250px{
+  width: 250px;
+}
+
+.sirka400px{
+  width: 400px;
+}
+
+.sirka600px{
+  width: 600px;
+}
+
+.objednavkaBox{
+  margin-top: 10px;
+  width: 100px;
+  overflow: hidden;
+  float: left;
+  margin-right: 25px;
+}
+
+.objednavkaInnerBox {
+  height: 75px;
+  border: 1px solid #cbcbcb;
+  background-color: #e8e8e8;
+  vertical-align: top;
+  color: #757c83;
+  padding-top: 8px;
+}
+
+.objednavkaInnerBoxActive{
+  height: 75px;
+  border: 1px solid #cbcbcb;
+  background-color: #FFFFFF;
+  vertical-align: top;
+  color: #757c83;
+  padding-top: 8px;
+}
+
+.objednavkaBod{
+  font-size: 20px;
+  font-weight: bold;
+  color: Red;
+  text-align: center;
+  display: block;
+}
+
+.objednavkaBodSub{
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+}
+
+.objednavkaBodSmall{
+  color: #757c83;
+  font-size: 9px;
+  text-align: center;
+  display: block;
+}
+
+.objednavkaFinalSummary {
+  margin-left: 15px;
+  margin-bottom: 3px;
+  float: left;
+  text-align: left;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.objednavkaFinalSummaryTop {
+  margin-left: 15px;
+  margin-bottom: 3px;
+  float: left;
+  text-align: left;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.objednavkaFinalSummaryBottom {
+  margin-left: 15px;
+  margin-bottom: 3px;
+  float: left;
+  text-align: left;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.fullrow{
+  float: left;
+  width: 100%;
+}
+
+.labelForm{
+  text-align: left;
+}
+
+.labelForm label{
+  font-size: 14px;
+  font-weight: bold;
+}
+/* ***** * *   ADMIN  *********/
+
+.adminMenuNadpis{
+  color: #fcb4b4;
+}
+
+.adminMenuPolozka{
+  color: white;
+}
+
+ .kategorie-main{
+    color: #a51a13;
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 11px;
+    width: 100px;
+    height: 25px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 10px;
+    background: url("images/linka-main-kategorie.gif");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: bottom
+}
+
+ .kategorie-normal{
+    color: #5b5b5b;
+    font-family: Tahoma;
+    font-weight: normal;
+    font-size: 11px;
+
+    line-height: 15px;
+
+
+    width: 100px;
+    margin-left: 13px;
+    margin-right: 8px;
+
+    padding-left: 10px;
+
+    background: url("images/sipka-kategorie.gif");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: left ;
+
+}
+
+.contentObsah{
+/*    height: 965px; */
+    min-width: 800px;
+
+    padding-left: 35px;
+    padding-top: 20px;
+    padding-bottom:50px;
+
+    margin-top: 5px;
+
+    background: url("images/delici_vertikala.gif");
+    background-repeat: repeat-y;
+    background-attachment: scroll;
+    background-position: left ;
+
+    vertical-align: top;
+}
+
+.contentMenu  {
+
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 100px;
+    vertical-align: top;
+
+
+}
+
+.main_text{
+  font-size: 117% ;
+  line-height: 25px;
+}
+

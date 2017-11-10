@@ -1,0 +1,99 @@
+<?php
+echo $this->render ( 'hlavicka_panika.phtml' );
+?>
+
+<div class="contentObsah" style="margin-right: 30px;">
+<h2>Nastavení uživatele - <?php echo Zend_Auth::getInstance()->getIdentity()->cele_jmeno; ?></h2>
+<br/>
+<br/>
+
+	<?php if(sizeof($this->errors) > 0) { ?>
+    	<ul class="notices">
+    	<?php foreach($this->errors as $_errors) { ?>
+    		<li><?php echo $_errors; ?></li>
+        	<?php } ?>
+    	</ul>    
+    <?php } ?>
+
+
+<h3>Změna údajů</h3>
+            <form action="<?php echo $this->url;?>/nastaveni/zmena-udaju" method="post" enctype="multipart/form-data">
+			
+			 <table>
+
+				 <tr>
+                    <td style="padding-bottom: 10px;">
+        				Pracoviště:
+    				</td>
+    				
+    				<td style="padding-bottom: 10px;">
+    				    <input style="height: 25px; padding-left: 10px;" type="text" value="<?php echo $this->uzivatel->umisteni;  ?>" name="nove_umisteni" value="" size="20" />
+    				</td>
+    		      </tr>
+                
+                <tr>
+				
+				    <td colspan="2" style="text-align: center;">
+				        <br/>
+				    </td>
+				</tr> 
+				 <tr>
+                    <td style="padding-bottom: 10px;">
+    				    Telefon:
+    				</td>
+    				
+    				<td style="padding-bottom: 10px;">
+    				    <input style="height: 25px; padding-left: 10px;" type="text" value="<?php echo $this->uzivatel->telefon; ?>" name="novy_telefon" value="" size="20" />
+    				</td>
+    		      </tr>
+				
+				<tr>
+				
+				    <td colspan="2" style="text-align: center;">
+				        <input class="searchbutton" style="width: 200px; height: 60px; font-size:large; margin-top: 10px;" type="submit" value="<?php echo "Změnit údaje" ?>" />
+				    </td>
+				</tr>
+				
+				</table>
+			</form>
+
+<br/><br/><br/><br/>
+<h3>Změna hesla</h3>
+            <form action="<?php echo $this->url;?>/nastaveni/zmena-hesla" method="post" enctype="multipart/form-data">
+			
+			 <table>
+			     <tr>
+			         <td style="width: 110px; padding-bottom: 10px;">
+        				Aktuální heslo:
+        			</td>
+        			
+        			<td style="padding-bottom: 10px;"> 
+				        <input style="height: 25px;  padding-left: 10px;"  type="password" name="aktualni_heslo" value="" size="20" />
+				    </td>
+				 </tr>
+				 
+				 <tr>
+                    <td style="padding-bottom: 10px;">
+    				Nové Heslo:
+    				</td>
+    				
+    				<td style="padding-bottom: 10px;">
+    				    <input style="height: 25px; padding-left: 10px;" type="text" name="nove_heslo" value="" size="20" />
+    				</td>
+    		      </tr>
+				
+				<tr>
+				
+				    <td colspan="2" style="text-align: center;">
+				        <input class="searchbutton" style="width: 150px; height: 60px; font-size:large; margin-top: 10px;" type="submit" value="<?php echo "Změnit heslo" ?>" />
+				    </td>
+				</tr>
+				
+				</table>
+			</form>
+
+</div>
+
+<?php
+echo $this->render ( 'paticka.phtml' );
+?>

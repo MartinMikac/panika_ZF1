@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="cs"/>
+<meta http-equiv="refresh" content="5">
+<meta name="keywords"
+	content="<?php echo $this->keyword; ?>" />
+
+<meta name="description"
+	content="<?php
+	
+	if ($this->description) {
+		echo $this->description;
+	}else {
+		//echo "Lavazza Service portal";
+	}
+	
+	?>" />
+
+<link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl?>/public/styles/styl.css" />	
+
+<?php
+//echo $this->render ( 'hlavicka_panika.phtml' );
+?>
+
+<div>
+
+  <div style="width:650px; float: left; margin-left:75px; font-size: 150%; font-weight: bold; " >   
+  <?php 
+    if ($this->alerts != null) {
+     
+    		foreach ($this->alerts as $alert){
+    		    
+    		    echo " <p> ";
+    		    echo " <H1 style=\"color: red;\">Stisknuto tlačítko paniky!</H1> ";    		    
+    		    echo "<br/>";
+    		    echo "Jméno: ". $alert->cele_jmeno;
+    		    echo "<br/>";
+    		    echo "Kde: ". $alert->umisteni;
+    		    echo "<br/>";
+    		    echo "Telefon: ". $alert->telefon;
+    		    echo "<br/>";
+    				
+                }
+    		?>
+    		
+    		  
+    		
+    		<?php
+                
+    		echo " </p> ";
+	} else {
+    		    
+    		    echo " <H1 style=\"color: red;\">Problém vyřešen!</H1> <br/><br/>  ";
+    		    echo " <H3 style=\"\">Okno je možné zavřít</H3> <br/><br/>  ";
+    
+	}		
+    		
+    			?>
+ </div>
+    
+</div>
+
+
+
+<?php
+//echo $this->render ( 'paticka.phtml' );
+?>

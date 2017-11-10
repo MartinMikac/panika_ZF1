@@ -1,0 +1,70 @@
+<?php
+echo $this->render ( 'hlavicka.phtml' );
+?>
+
+<div class="contentObsah" style="margin-right: 30px;">
+
+
+<h2>Lavazza Service portal</h2>
+
+
+    <div class="DivCenter">
+    <table class="tabulka" >
+    	<tr >
+    		<th class="sirka150px">Model
+    		</th>
+    		
+    		<th class="sirka150px">Výrobní číslo
+    		</th>
+    		
+    		<th class="sirka400px">Umístění
+    		</th>
+    		
+    		
+    		<th class="sirka150px">upravit položky
+    		</th>
+    		
+    	</tr>
+    
+    <?php
+    		foreach ($this->machines as $machine){
+    			?>
+    	<tr>
+    		
+    	
+    		<td >
+    			<?php echo $machine->model ?>
+    		</td>
+    		
+    		<td >
+    			<?php echo $machine->vyrobni_cislo ?>
+    		</td>
+    		    		
+    		<td >
+    			<?php echo $machine->umisteni ?>
+    		</td>
+    		
+    		<td class="textCenter">
+    			<a href="<?php echo  $this->baseUrl."/editace/stroj/id/".$machine->id_machine ?>" >
+    				Upravit
+    			</a>
+    		</td>
+    
+    	</tr>	
+    	<?php
+    		}
+    	?>
+    
+    
+    </table>
+    
+    </div>
+	
+	
+</div>
+
+
+
+<?php
+echo $this->render ( 'paticka.phtml' );
+?>

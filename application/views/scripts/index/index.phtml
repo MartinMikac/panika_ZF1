@@ -1,0 +1,152 @@
+<?php
+echo $this->render ( 'hlavicka_panika.phtml' );
+?>
+
+<div class="contentObsah" style="margin-right: 30px;">
+
+
+  <?php
+
+  //Zend_Debug::dump($this->alerts);
+    if ($this->alerts == null) {
+        ?>
+          <div style="width:260px;" >
+              <form action="<?php echo $this->url . "/index/panika" ; ?>" method="post" enctype="multipart/form-data">  
+                    <input type="submit" value="! ! ! PANIKA ! ! !" class="tlacitko" style="width:200px; height: 60px; font-size: 100%; background-color: red; color: white;">
+              </form>
+          </div>
+            <br/>
+        <br/>
+        <?php 
+    } else {
+?>
+
+
+
+<div>
+
+  <div style="width:650px; float: left; font-size: 150%; font-weight: bold; " >
+  <?php 
+    if ($this->alerts != null) {
+     
+    		foreach ($this->alerts as $alert){
+    		    
+    		    echo " <p> ";
+    		    echo " <H3 style=\"color: red;\">Stiknuto tlačítko paniky!</H3> ";    		    
+    		    echo "<br/>";
+    		    echo "Jméno: ". $alert->cele_jmeno;
+    		    echo "<br/>";
+    		    echo "Kde: ". $alert->umisteni;
+    		    echo "<br/>";
+    		    echo "Telefon: ". $alert->telefon;
+    		    echo "<br/>";
+    		?>
+    		
+    		  
+    		
+    		<?php
+
+    		echo " </p> ";
+    		}
+    }
+    		
+    		
+    			?>
+    </div>
+    
+          <div style="width:260px;  float: left" >
+          <?php //<form action="script/panika.php" method="POST">  ?>
+          
+          <form action="<?php echo $this->url . "/index/panika-vyreseno" ; ?>" method="post" enctype="multipart/form-data">  
+                <input type="submit" value=" VYŘEŠENO" class="tlacitko" style="width:200px; height: 60px; font-size: 100%;">
+          </form>
+          </div>
+          
+          
+</div>
+
+
+         <div style="clear:both"> </div>
+        <br/>
+        <br/>
+<?php         
+    }
+    
+    ?>
+
+
+
+
+
+
+
+
+
+<h2>Přihlášení uživatelé</h2>
+
+
+
+    <div class="DivCenter">
+    <table class="tabulka" >
+    	<tr >
+    		<th class="sirka150px">Jméno
+    		</th>
+    		
+    		<th class="sirka150px">Oddělení
+    		</th>
+    		
+    		<th class="sirka150px">telefon
+    		</th>
+    		
+    		
+    		<th class="sirka400px">čas
+    		</th>
+    		
+    	</tr>
+    
+    <?php
+    if ($this->uzivatele != null) {
+     
+    		foreach ($this->uzivatele as $uzivatel){
+    			?>
+    	<tr>
+    		
+    	
+    		<td >
+    			<?php echo $uzivatel->cele_jmeno ?>
+    		</td>
+    		
+    		<td >
+    			<?php echo $uzivatel->umisteni ?>
+    		</td>
+    		    		
+    		<td >
+    			<?php echo $uzivatel->telefon ?>
+    		</td>
+    		
+    		
+    		<td >
+    			<?php echo $uzivatel->cas_prihlaseni ?>
+    		</td>
+    
+    	</tr>	
+    	<?php
+    		}
+    		
+    		
+    }
+    	?>
+    
+    
+    </table>
+    
+    </div>
+				
+			
+</div>
+
+
+
+<?php
+echo $this->render ( 'paticka.phtml' );
+?>

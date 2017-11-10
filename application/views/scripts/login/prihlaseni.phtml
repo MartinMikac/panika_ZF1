@@ -1,0 +1,47 @@
+<?php
+echo $this->render ( 'hlavicka.phtml' );
+?>
+
+<div class="contentObsah" style="margin-right: 30px;">
+<br />
+<br />
+<br />
+
+<h1>Přihlašte se</h1><br />
+<h3><?php echo $this->title ?></h3><br />
+
+
+<form action="<?php echo $this->baseUrl ?>/login/prihlaseni<?php echo $this->action; ?>" method="post">  
+	<table>
+	  	<tr>
+		  	<td>
+		  	<?php echo _("Jméno") ?>
+	  		</td>
+	  	
+	  		<td><input class="form_input_login" type="text" name="jmeno" size="10"/>
+	  		</td>
+	  	</tr>
+  	
+	  	<tr>
+		  	<td>
+		  	<?php echo _("Heslo") ?>
+	  		</td>
+	  	
+	  		<td><input class="form_input_login" type="password" name="heslo" size="10"/>
+	  		</td>
+	  	</tr>
+  	
+  	<tr>
+  	<td colspan="2" align="center"><input class="form_submit_login" type="submit" value="<?php echo _("Vstoupit");?>"/>
+  	</td>
+  	</tr>
+  	</table>
+        
+        
+  </form>
+
+  </div>
+
+<?php
+echo $this->render ( 'paticka.phtml' );
+?>
